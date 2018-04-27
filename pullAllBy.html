@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.2/lodash.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var data = {
+        "datas": [{
+            "amount": 0,
+            "compensatory_status": 1,
+            "confirm_tag": 2,
+            "fee": 54394,
+            "financing_mode": 1,
+            "id": 1992,
+        }, {
+            "amount": 0,
+            "compensatory_status": 1,
+            "confirm_tag": 2,
+            "fee": 54394,
+            "financing_mode": 1,
+            "id": 1992,
+        }, {
+            "amount": 0,
+            "compensatory_status": 1,
+            "confirm_tag": 1,
+            "fee": 54394,
+            "financing_mode": 1,
+            "id": 1992,
+        }],
+    }
+    var newData = data.datas;
+    _.pullAllBy(newData, [{ 'confirm_tag': 1 }], 'confirm_tag');
+    console.log(newData);
+    </script>
+</body>
+
+</html>
